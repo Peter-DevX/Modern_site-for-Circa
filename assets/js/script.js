@@ -3,30 +3,51 @@ let carousel_2 = document.querySelector("#carousal-2") || "";
 let load_video_one = document.querySelectorAll("#load-video-one") || "";
 let menu_in = document.querySelector("#menu_in");
 let menu_out = document.querySelector("#menu_out");
-let submenus = menu_out.querySelectorAll("a");
+// let submenus = menu_out.querySelectorAll("a");
 let img = document.querySelectorAll("img");
 
-if( img ) {
+
+const navLink = document.querySelectorAll('.nav-link');
+
+navLink.forEach((nav) => {
+    nav.addEventListener('click', () => {
+        // Remove 'active' class from all nav links
+        navLink.forEach((link) => link.classList.remove('active'));
+
+        // Add 'active' class to the clicked nav link
+        nav.classList.add('active');
+    });
+});
+
+
+
+
+
+
+
+
+
+if (img) {
     img.forEach(images => {
-        images.setAttribute("loading" , "lazy");
-        if(images.parentElement.getAttribute("id") == "carousal-2" || images.parentElement.getAttribute("id") == "carousal") {
+        images.setAttribute("loading", "lazy");
+        if (images.parentElement.getAttribute("id") == "carousal-2" || images.parentElement.getAttribute("id") == "carousal") {
             images.classList.add("filter_white");
         }
     })
 }
 
-if( carousal && carousel_2 ) {
+if (carousal && carousel_2) {
     function carousal_scroll() {
         setTimeout(() => {
             carousal.scrollLeft += 100;
-            if(carousal.scrollLeft >= carousal.scrollWidth - carousal.clientWidth) {
+            if (carousal.scrollLeft >= carousal.scrollWidth - carousal.clientWidth) {
                 carousal.scrollLeft = 0;
             }
             carousal_scroll();
         }, 1200);
     }
 
-    
+
     function carousel_scroll_2() {
         setTimeout(() => {
             carousel_2.scrollLeft -= 100;
@@ -42,7 +63,7 @@ if( carousal && carousel_2 ) {
     carousel_2.scrollLeft = carousel_2.scrollWidth - carousel_2.clientWidth;
 }
 
-if( load_video_one ) {
+if (load_video_one) {
     window.onscroll = () => {
         load_video_frames();
     }
@@ -59,28 +80,28 @@ if( load_video_one ) {
     }
 }
 
-if( menu_in && menu_out && submenus ) {
+if (menu_in && menu_out && submenus) {
     menu_in.onclick = (e) => {
         e.preventDefault();
         menu_out.classList.toggle("header-flex-none");
     }
-    
-    submenus.forEach( sub => { 
-            sub.onclick = (e) => {
-                let div = e.target.nextElementSibling
-                let status = (div) && (div.getAttribute("id") == "submenu") ? true : false;
-                status == true ? e.preventDefault() : e.stopPropagation();
-                status == true ? div.classList.toggle("header-flex-none") : false;
-            }
+
+    submenus.forEach(sub => {
+        sub.onclick = (e) => {
+            let div = e.target.nextElementSibling
+            let status = (div) && (div.getAttribute("id") == "submenu") ? true : false;
+            status == true ? e.preventDefault() : e.stopPropagation();
+            status == true ? div.classList.toggle("header-flex-none") : false;
+        }
     })
 }
 
 function resizeFont(e) {
     let top_2 = document.querySelector(".top_h2");
-    if( window.innerWidth > 768 ) {
+    if (window.innerWidth > 768) {
         top_2.textContent = "Explore how fine-tuning LLMs can revolutionize cost-effective GenAI inference at scale.";
     } else {
-        top_2.textContent = top_2.textContent.substring(0 , 29) + "...";
+        top_2.textContent = top_2.textContent.substring(0, 29) + "...";
     }
 
     console.log("Created By: MalikCodex <code><a href='https://malikcodex.blogspot.com'>Check Out</a></code>");
@@ -90,19 +111,19 @@ let btn = document.querySelectorAll("button");
 let tabs = document.querySelectorAll("#tabs section");
 let btnStatus = "";
 
-if( tabs && btn ) {
+if (tabs && btn) {
     btn.forEach(btns => {
         btns.onclick = (e) => {
             document.querySelector("button.header-bg-purple").classList.remove("header-bg-purple");
             btns.classList.add("header-bg-purple");
-            btnStatus = e.target.getAttribute("id").replace("btn","tab");
+            btnStatus = e.target.getAttribute("id").replace("btn", "tab");
             changeTabBox(btnStatus);
         }
     })
-    
-    function changeTabBox( event ) {
+
+    function changeTabBox(event) {
         tabs.forEach(alltabs => {
-            if(event == alltabs.getAttribute("id")) {
+            if (event == alltabs.getAttribute("id")) {
                 alltabs.classList.remove("header-flex-none");
             } else {
                 alltabs.classList.add("header-flex-none");
@@ -111,57 +132,31 @@ if( tabs && btn ) {
     }
 }
 
-window.addEventListener("resize" , resizeFont);
-window.addEventListener("load" , resizeFont);
+window.addEventListener("resize", resizeFont);
+window.addEventListener("load", resizeFont);
 
 
-const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('[id]');
+const homeRef = document.querySelectorAll('.home');
+const projectRef = document.querySelectorAll('.project');
+const teamRef = document.querySelectorAll('.team');
+const contactRef = document.querySelectorAll('.contact');
+const sections = document.querySelectorAll('id');
 
-const activateLink = (link) => {
-  navLinks.forEach(navLink => navLink.classList.remove('active'));
-  link.classList.add('active');
-}
 
-const activateByScroll = () => {
-  const currentPosition = window.scrollY;
-  let activeSection;
 
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const sectionBottom = sectionTop + sectionHeight;
 
-    if (currentPosition >= sectionTop && currentPosition < sectionBottom) 1 ;
-     {
-      activeSection = section.id;
-    }
-  });
 
-  if (activeSection) {
-    const activeLink = document.querySelector(`[href="#${activeSection}"]`);
-    activateLink(activeLink);
-  }
-}
-
-// Add click event listener to each menu link
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    const targetSection = link.getAttribute('href').substring(1);
-    activateLink(link);
-    
-    // Optional: Smooth scrolling to the target section (requires a library like anime.js)
-    // anime({
-    //   targets: `#${targetSection}`,
-    //   scrollTop: 0,
-    //   duration: 800,
-    //   easing: 'easeInOutSine'
-    // });
-  });
-});
 
 // Add scroll event listener to activate links on scroll
 window.addEventListener('scroll', activateByScroll);
 
 // Activate the link for the current section on page load
 activateByScroll();
+
+
+
+
+
+
+
+

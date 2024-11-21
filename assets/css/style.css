@@ -22,12 +22,17 @@ body {
 .nav-bar{
     background: white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 3rem;
     position: fixed;
     height: 100px;
     width: 100vw;
     z-index: 999;
+}
+
+nav a.active{
+
 }
 
 .nav-container{
@@ -95,6 +100,7 @@ body {
     margin-left: 20rem;
     margin-right: 2rem;
 }
+
 
 
 .icon{
@@ -1045,3 +1051,124 @@ a {
 }
 
 
+/* Footer Styles */
+.footer {
+    background-color: #1f2641;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #f0a500;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #f0a500;
+}
+
+.social-links li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links li a i {
+    font-size: 16px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #ffffff33;
+    padding-top: 15px;
+    color: #cccccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-container ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        display: none; /* Initially hidden for mobile */
+    }
+
+    .menu-container.active ul {
+        display: flex; /* Show menu when active */
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .socials a {
+        display: none;
+        width: 25px;
+        height: 25px;
+    }
+
+}
