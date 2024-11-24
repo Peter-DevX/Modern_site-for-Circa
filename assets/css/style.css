@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 
 }
 
@@ -22,7 +22,7 @@ body {
 }
 
 /* my personal styling for navs/icon */
-.nav-bar{
+nav{
     background: white;
     display: flex;
     flex-wrap: wrap;
@@ -32,50 +32,41 @@ body {
     height: 100px;
     width: 100vw;
     z-index: 999;
-    overflow-x: hidden;
-
 }
 
 
-.nav-container{
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
+
+
+
+.sidebar{
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    background-color: rgba(75, 70, 70, 0.22);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: 0.5s;
+}
+.sidebar li:first-child:hover{
+    background: none;
+}
+.sidebar li,a{ 
+    width: 100%;
 }
 
-.nav-container .logo img a{
-    border-radius: 0 15px 15px 0; 
-    box-shadow: 0 2px 2px rgba(10, 10, 10, 0.26);
-    height: 5rem;
-    width: 3rem;
-
+.sidebar li:hover{
+    background-color: rgba(255, 255, 255, 0.274);
 }
 
-.menu-container{
-    padding-left: 30px;
+.menu_bar{
+    display: none;
 }
-
-
-.menu-container ul{
-    width: 600px;
-    list-style-type: none;
-    display: flex;
-}
-
-.menu-container ul li{
-    display: inline-block;
-    gap: 3rem;
-    font-size: 1.3rem;
-    margin-right: 40px;
-    justify-content: center;
-}
-
-.menu-container ul a{
-    color: black;
-    transition: 0.4s all ease;
-}
-
 
 .active{
     color: #8069BF;
@@ -117,6 +108,12 @@ body {
 
 .button:hover{
     background: #563ba2;
+}
+
+.button1{
+    background: #8069BF;
+    transition: 400ms ease;
+    width: fit-content;
 }
 
 .box-size{
@@ -204,6 +201,7 @@ textarea:focus{
     display: inline-block;
     padding: 12px 24px;
     color: #fff;
+    text-align: center;
     border: none;
     cursor: pointer;   
 }
@@ -273,8 +271,11 @@ textarea:focus{
     width: 100%;
 }
 
+.header-cont{
+    padding: 10px;
+}
 .header-cont img{
-    margin: 0 20%;
+    margin: 0 10%;
 }
 
 .header-cont h3{
@@ -562,13 +563,7 @@ textarea:focus{
     transform: none;
 }
 
-.header-transform-skew-none {
-    transform: skew(0deg , 2deg);
-}
 
-.filter_white {
-    filter: invert(1);
-}
 
 .header-bg-purple-gradient {
     background: linear-gradient(45deg, rgb(40, 211, 170) 0%, rgb(98, 7, 243) 82%);
@@ -578,10 +573,6 @@ textarea:focus{
     background: white;
 }
 
-.header-scroll-snap-type {
-    scroll-snap-type: x mandatory;
-    scroll-snap-align: center;
-}
 
 .header-position-relative {
     position: relative;
@@ -713,7 +704,8 @@ textarea:focus{
     padding: 20px;
 } 
 
-.header-padding-md {
+.header-padding-md img{
+    margin-right: 50px;
     padding: 40px;
 }
 
@@ -912,15 +904,6 @@ textarea {
     user-select: none !important;
 }
 
-.header-btn-outline-purple {
-    padding: 5px 20px;
-    background-color: transparent;
-    color: #5641cf;
-    font-size: 17px;
-    border: 1px solid #5948be;
-    border-radius: 8px;
-    cursor: pointer;
-}
 
 .fa-brands, .fab {
     font-family: "Font Awesome 6 Brands" !important;
@@ -946,6 +929,11 @@ a {
 
     }
 
+
+  
+    .header-margin-top{
+        margin-top: 4rem;
+    }
 
     .header-font-sm {
         font-size: 16px;
@@ -1076,9 +1064,9 @@ a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 40px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-left:400px;
 }
 
 .footer-section {
@@ -1162,18 +1150,21 @@ a {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .menu-container ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-        display: none; /* Initially hidden for mobile */
-    }
+    
 
     .menu-container.active ul {
         display: flex; /* Show menu when active */
     }
     .logo {
-        margin-bottom: 10px;
+
+    display: none;    
+}
+
+    .hideOnMobile{
+        display: none;
+    }
+    .menu_bar{
+        display: block;
     }
 }
 
@@ -1184,4 +1175,155 @@ a {
         height: 25px;
     }
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    display: flex;    
+    justify-content: space-between;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 5rem; */
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    font-size: 1.4rem;
+    padding: 0 30px;
+    height: 100%;
+    text-decoration: none;
+    display: flex;    
+    align-items: center;
+    color: rgb(26, 24, 24);
+    transition: 0.3s ease-out;
+
+}
+nav a:hover{
+    color: #8069BF;
+}
+/* nav ul{
+    padding-top: 20px;
+    margin-left: 30%;
+    align-items: center;
+} */
+
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    /* background-color: rgba(75, 70, 70, 0.22); */
+    background-color: #5641cfa4;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: 5s ease-out;
+}
+
+
+.sidebar li:first-child:hover{
+    background: none;
+}
+.sidebar li,a{ 
+    width: 100%;
+}
+
+.sidebar li:hover{
+    background-color: rgba(255, 255, 255, 0.274);
+}
+.menu_bar{
+    display: none;
+}
+
+@media(max-width:990px){ 
+    .hideOnMobile{
+        display: none;
+    }
+    .menu_bar {
+        display: block;
+        margin-left: 320px;
+
+    }
+
+    nav ul:nth-child(2){
+        padding-top: 20px;
+        margin-left: 80%;
+        align-items: center;
+    }
+
+    nav{
+        background-color: #5641cf;
+        display: flex;    
+        justify-content: space-between;
+    }
+
+    .sidebar li a:hover{
+        color: white;
+    }
+
+    .sidebar li a{
+        border-radius: 50%;
+    }
+
+    .fa-brands{
+        border-radius: 50%;
+    }
+}
+
+
+@media(max-width: 400px){
+
+}
+
+
+
+@media(max-width: 400px){
+    
+    .menu_bar{
+        display: block;
+        margin-left: 199px;
+    }
+
+   
+    .sidebar{
+        width: 100%;
+    }
+
+    .fa-brands{
+        border-radius: 50%;
+    }
+
+    
 }

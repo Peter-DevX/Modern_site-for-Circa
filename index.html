@@ -14,47 +14,48 @@
     <script src="assets/js/script.js" defer></script>
 </head>
 <body>
-    <header class="header-container">
-        <!-- top bar section -->
-        <nav class="nav-bar">
-            <div class="nav-container">
-                <div class="logo">
-                   <a href="index.html"><img src="assets/images/circa.AI Logo n small 5 1.png" alt="CirCarl"></a> 
-                </div>
+    <nav>
+        <div class="logo" >
+           <a href="#"><img src="assets/images/circa.AI Logo n small 5 1.png" style="width: 140px; height: 100px; border-radius:50%;" alt=""></a> 
+        </div>
+
+        <ul class="sidebar">
+            <li onclick= closeSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+            <span>
+                <li><a href="https://www.facebook.com/?sk=welcome"><i class="fa-brands fa-facebook"></i></a></i></li>
+                <li><a href="https://www.instagram.com/circa_rl/"><i class="fa-brands fa-instagram"></i></i></a></i></li>
+                <li><a href="https://x.com/home" class="fa-brands"><i class="fa-brands fa-twitter"></i></a></i></li>
+            </span>
+        </ul>
+
+        <ul class="menu">
+            <li class="hideOnMobile"><a href="#home" data-section="home" class="nav-link active">Home</a></li>
+            <li class="hideOnMobile"><a href="#projects" data-section="projects" class="nav-link">Projects</a></li>
+            <li class="hideOnMobile"><a href="#team" data-section="team" class="nav-link">Team</a></li>
+            <li class="hideOnMobile"><a href="#contact" data-section="contact" class="nav-link" >Contact</a></li>
+            <li onclick=showSidebar()><a href="#" class="menu_bar" ><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="35px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
     
-                <div class="menu-container">
-                    <ul>
-                        <li ><a href="#home" data-section="home" class="nav-link active">HOME</a></li>
-                        <li><a href="#projects" data-section="projects" class="nav-link">PROJECTS</a></li>
-                        <li><a href="#team" data-section="team" class="nav-link">TEAM</a></li>
-                        <li><a href="#contact" data-section="contact" class="nav-link">CONTACT US</a></li>
-                    </ul>
-                </div>
-    
-                <div class="socials">
-                   <div class="instagram">
-                    <a href="https://www.instagram.com/circa_rl/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="instagram">
-                        <path d="M5.41421,1.17157c1.17157,1.17157 1.17157,3.07107 0,4.24264c-1.17157,1.17157 -3.07107,1.17157 -4.24264,0c-1.17157,-1.17157 -1.17157,-3.07107 -8.88178e-16,-4.24264c1.17157,-1.17157 3.07107,-1.17157 4.24264,-8.88178e-16" transform="translate(4.707 4.707)"></path>
-                        <path d="M11.5,0h-7c-2.48145,0 -4.5,2.01855 -4.5,4.5v7c0,2.48145 2.01855,4.5 4.5,4.5h7c2.48145,0 4.5,-2.01855 4.5,-4.5v-7c0,-2.48145 -2.01855,-4.5 -4.5,-4.5Zm-3.5,12c-2.20557,0 -4,-1.79395 -4,-4c0,-2.20605 1.79443,-4 4,-4c2.20557,0 4,1.79395 4,4c0,2.20605 -1.79443,4 -4,4Zm4.5,-8c-0.276123,0 -0.5,-0.223877 -0.5,-0.5c0,-0.276184 0.223877,-0.5 0.5,-0.5c0.276123,0 0.5,0.223816 0.5,0.5c0,0.276123 -0.223877,0.5 -0.5,0.5Z"></path>
-                      </svg></a>
-                   </div>
-                   
-    
-                   <div class="twitter">
-                    <a href="https://x.com/home"><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 16 16" id="twitter">
-                        <path d="M16 3.539a6.839 6.839 0 0 1-1.89.518 3.262 3.262 0 0 0 1.443-1.813 6.555 6.555 0 0 1-2.08.794 3.28 3.28 0 0 0-5.674 2.243c0 .26.022.51.076.748a9.284 9.284 0 0 1-6.761-3.431 3.285 3.285 0 0 0 1.008 4.384A3.24 3.24 0 0 1 .64 6.578v.036a3.295 3.295 0 0 0 2.628 3.223 3.274 3.274 0 0 1-.86.108 2.9 2.9 0 0 1-.621-.056 3.311 3.311 0 0 0 3.065 2.285 6.59 6.59 0 0 1-4.067 1.399c-.269 0-.527-.012-.785-.045A9.234 9.234 0 0 0 5.032 15c6.036 0 9.336-5 9.336-9.334 0-.145-.005-.285-.012-.424A6.544 6.544 0 0 0 16 3.539z"></path>
-                      </svg></a>
-                   </div>
-    
-                   <div class="facebook">
-                    <a href="https://www.facebook.com/?sk=welcome"><svg width="43" height="43" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.3337 10.0003C18.3337 5.40033 14.6003 1.66699 10.0003 1.66699C5.40033 1.66699 1.66699 5.40033 1.66699 10.0003C1.66699 14.0337 4.53366 17.392 8.33366 18.167V12.5003H6.66699V10.0003H8.33366V7.91699C8.33366 6.30866 9.64199 5.00033 11.2503 5.00033H13.3337V7.50033H11.667C11.2087 7.50033 10.8337 7.87533 10.8337 8.33366V10.0003H13.3337V12.5003H10.8337V18.292C15.042 17.8753 18.3337 14.3253 18.3337 10.0003Z" fill="black"/>
-                        </svg></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+
+            <!-- <ul class="sidebar">
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></i></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></i></a></i></li>
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a></i></li>
+            </ul> -->
+            <ul class="sidebar">
+                <li><a href="https://www.facebook.com/?sk=welcome"><i class="fa-brands fa-facebook"></i></a></i></li>
+                <li><a href="https://www.instagram.com/circa_rl/"><i class="fa-brands fa-instagram"></i></i></a></i></li>
+                <li><a href="https://x.com/home"><i class="fa-brands fa-twitter"></i></a></i></li>
+            </ul>
+        
+           
+    </nav>
+
 
 <!-- first section -->
 <div class="header-container" id="home">
@@ -79,7 +80,7 @@
                      Our goal is to drive both individual and societal advancement through cutting-edge technology.</h3>
             </div>
             <div class="header-content header-margin-top-md header-margin-bottom-sm header-flex header-flex-center header-align-center">
-                 <a href="#contact" class="header-btn-md header-font-md button header-border-radius-sm header-text-white header-text-none">Lets Talk</a>
+                 <a href="#contact" class="header-btn-md header-font-md button1 button header-border-radius-sm header-text-white header-text-none">Lets Talk</a>
             </div>
         </div>
      </div>
@@ -141,41 +142,48 @@
                 <div class="header-flex-grid-3 header-flex-gap-sm">
                     <div class="header-content header-cont header-bg-transparent header-padding-md header-border-radius-new">
                         <img src="assets/images/Amaniampong Amankwah Wisdom.png">
-                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">AMANIAMPONG AMANKWAH WISDOM</h3>
+                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Amaniampong Amankwah <br> Wisdom</h3>
                         <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active active">CHIEF EXECUTIVE OFFICE</h5>
                     </div>
+                    
 
                     <div class="header-content header-cont header-bg-transparent header-padding-md header-border-radius-new">
                         <img  src="assets/images/Peter Asiedu-Gyan.png">
-                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">PETER ASIEDU-GYAN</h3>
+                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Peter Asiedu-Gyan </h3>
                         <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active">SOFTWARE ENGINEER</h5>
                     </div>
 
-                    <div class="header-content  header-cont header-bg-transparent header-padding-md header-border-radius-new">
-                        <img src="assets/images/Osborn Ayeh.png">
-                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">OSBORN ANGMOR AYEH</h3>
-                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active">SOFTWARE ENGINEER</h5>
-                    </div>
 
                     <div class="header-content  header-cont header-bg-transparent header-padding-md header-border-radius-new">
                         <img src="assets/images/Josiah Okornoe.png">
-                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">MICHAEL LARYEA TETTEH</h3>
+                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Josiah Okonoe</h3>
                         <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active">SOFTWARE ENGINEER</h5>
                     </div>
 
                     <div class="header-content  header-cont header-bg-transparent header-padding-md header-border-radius-new">
                         <img src="assets/images/michael laryea tetteh.png">
-                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">AGYEI-BOAKYE EMMANUEL</h3>
+                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Michael Laryea</h3>
                         <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active">RESEARCH OFFICER</h5>
                     </div>
 
                     <div class="header-content  header-cont header-bg-transparent header-padding-md header-border-radius-new">
-                        <img src="assets/images/Agyei Boakye Emmanuel.png">
+                        <img src="assets/images/Richmond.jpg" width="270px" height="270px" style="border-radius: 50%;">
+                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Richmond Manu Andoh</h3>
+                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white">Software Engineer</h5>
+                    </div>        
+                                
+                    <div class="header-content  header-cont header-bg-transparent header-padding-md header-border-radius-new">
+                        <img src="assets/images/Agyei Boakye Emmanuel.png" >
                         <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Agyei Boakye</h3>
                         <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white">RESEARCH OFFICER</h5>
-                    </div>
-
+                    </div> 
                     
+                    
+                    <div class="header-content  header-cont header-bg-transparent header-padding-md header-border-radius-new">
+                        <img src="assets/images/Osborn Ayeh.png">
+                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">OSBORN ANGMOR AYEH</h3>
+                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active">SOFTWARE ENGINEER</h5>
+                    </div>
                 </div>
             </div>
           </div>
@@ -184,13 +192,14 @@
 </div>
  
 <!-- CONTACT SECTION -->
-<div class="contact" id="contact">
+<div class="contact header-container" id="contact">
     <h2>Contact Us</h2>
     <div class="container">
         <div class="contact-wrapper">
             <div class="contact-form">
                 <h3>Send us a message </h3>
-            <form >
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="892d315a-5566-449b-98a7-38cb6175d0c4">
                 <div class="form-group">
                     <input class="input" type="text" name="name" placeholder="Your Name">
                 </div>
@@ -218,16 +227,17 @@
     <div class="footer-container">
         <div class="footer-section">
             <h3>About Us</h3>
-            <p>We are a dedicated team providing top-notch services and creating exceptional web experiences.</p>
+            <p>At Circa, we leverage AI to drive economic growth, enhance healthcare through predictive technologies, 
+                and improve quality of life via sustainable and innovative solutions.</p>
         </div>
-        <div class="footer-section">
+        <!-- <div class="footer-section">
             <h3>Quick Links</h3>
             <ul>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
+        </div> -->
         <div class="footer-section">
             <h3>Follow Us</h3>
             <ul class="social-links">
