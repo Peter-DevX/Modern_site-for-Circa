@@ -4,12 +4,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+
 }
 
 html{
     scroll-behavior: smooth;  
-      overflow-x: hidden;
-
 
 }
 
@@ -941,6 +941,12 @@ a {
 }
 
 @media screen and (max-width: 992px) {
+    html{
+        overflow-x: hidden;
+
+    }
+
+
     .header-font-sm {
         font-size: 16px;
     }
@@ -1001,6 +1007,11 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+    html{
+        overflow-x: hidden;
+
+    }
+    
     .header-font-sm {
         font-size: 14px;
     }
