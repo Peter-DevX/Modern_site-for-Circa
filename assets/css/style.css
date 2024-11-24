@@ -4,8 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scro
-
+    overflow-x: hidden;
 }
 
 html{
@@ -33,13 +32,9 @@ body {
     z-index: 999;
 }
 
-nav a.active{
-
-}
 
 .nav-container{
     align-items: center;
-    border-bottom: 1px solid rgb(222, 219, 219);
     display: flex;
     justify-content: space-between;
     width: 100vw;
