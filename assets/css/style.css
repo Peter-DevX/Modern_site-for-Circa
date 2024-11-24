@@ -4,11 +4,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;  
+      overflow-x: hidden;
+
+
 }
 
 h1, h2, h3, h4, h5, h6, p, label, span, button, a, div {
@@ -30,6 +32,8 @@ body {
     height: 100px;
     width: 100vw;
     z-index: 999;
+    overflow-x: hidden;
+
 }
 
 
@@ -251,6 +255,7 @@ textarea:focus{
 
 
 .header-container {
+    overflow-x: hidden;
     width: 100%;
 }
 
