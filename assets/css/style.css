@@ -364,6 +364,11 @@ textarea:focus{
     font-size: 17px;
 }
 
+
+.sidebar .close-sidebar{
+    margin-left: 1.2rem;
+}
+
 .header-font-md {
     font-size: 20px;
 }
@@ -932,6 +937,9 @@ a {
 .header-flex-column {
     flex-direction: column;
 }
+
+
+
 
 @media screen and (max-width: 992px) {
     html{

@@ -226,3 +226,44 @@ document.addEventListener("DOMContentLoaded", () => {
     // Attach the scroll event listener
     window.addEventListener("scroll", activateLink);
 });
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const sidebar = document.querySelector('.sidebar');
+//     const menuBar = document.querySelector('.menu_bar'); // For toggling
+//     const navLinks = document.querySelectorAll('.nav-link');
+
+//     // Function to show the sidebar
+//     function showSidebar() {
+//         sidebar.classList.add('visible'); // Add your "visible" class
+//     }
+
+//     // Function to hide the sidebar
+//     function closeSidebar() {
+//         sidebar.classList.remove('visible'); // Remove your "visible" class
+//     }
+
+//     // Listen for clicks on the menu bar to toggle the sidebar
+//     menuBar.addEventListener('click', (e) => {
+//         e.stopPropagation(); // Prevent the document click handler
+//         showSidebar();
+//     });
+
+//     // Add click event to close the sidebar when clicking outside
+//     document.addEventListener('click', (e) => {
+//         if (!sidebar.contains(e.target) && !menuBar.contains(e.target)) {
+//             closeSidebar();
+//         }
+//     });
+
+//     // Prevent closing when clicking on links inside the sidebar
+//     navLinks.forEach(link => {
+//         link.addEventListener('click', (e) => {
+//             e.stopPropagation(); // Prevent the document click handler
+//             closeSidebar(); // Close the sidebar after navigating
+//         });
+//     });
+// });
+
+
