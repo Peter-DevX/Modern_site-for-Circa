@@ -155,15 +155,74 @@ const sections = document.querySelectorAll('id');
 
 
 // Add scroll event listener to activate links on scroll
-window.addEventListener('scroll', activateByScroll);
+// window.addEventListener('scroll', activateByScroll);
 
-// Activate the link for the current section on page load
-activateByScroll();
-
-
+// // Activate the link for the current section on page load
+// activateByScroll();
 
 
 
 
+// document.addEventListener("DOMContentLoaded", () => {
+//     const sections = document.getElementsByClassName("section");
+//     const navLinks = document.querySelectorAll(".nav-link");
+
+//     const handleScroll = () => {
+//         let current = "";
+        
+//         // Loop through sections to check which is currently in the viewport
+//         sections.forEach((section) => {
+//             const sectionTop = section.offsetTop - 100; // Offset for better accuracy
+//             const sectionHeight = section.offsetHeight;
+
+//             if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+//                 current = section.getAttribute("id"); // Get current section id
+//             }
+//         });
+
+//         // Remove active class from all nav links
+//         navLinks.forEach((link) => {
+//             link.classList.remove("active");
+
+//             // Add active class to the corresponding link
+//             if (link.getAttribute("data-section") === current) {
+//                 link.classList.add("active");
+//             }
+//         });
+//     };
+
+//     // Listen for the scroll event
+//     window.addEventListener("scroll", handleScroll);
+// });
 
 
+
+
+// JavaScript to add active class based on scroll position
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    const activateLink = () => {
+        let currentSection = "";
+
+        // Determine the current section in view
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 100; // Adjust offset for smoother activation
+            if (window.scrollY >= sectionTop) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+
+        // Add 'active' class to the corresponding nav link
+        navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("data-section") === currentSection) {
+                link.classList.add("active");
+            }
+        });
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener("scroll", activateLink);
+});

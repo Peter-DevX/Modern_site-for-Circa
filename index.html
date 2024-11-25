@@ -7,24 +7,24 @@
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
     <!-- script -->
     <script src="assets/js/script.js" defer></script>
 </head>
 <body>
     <nav>
-        <div class="logo" >
-           <a href="#"><img src="assets/images/circa.AI Logo n small 5 1.png" style="width: 140px; height: 100px; border-radius:50%;" alt=""></a> 
+        <div class="logo">
+           <a href="#"><img src="assets/images/circa.AI Logo n small 5 1.png" style="width: 250px; height: 90px; border-radius:5px;" alt=""></a> 
         </div>
 
         <ul class="sidebar">
-            <li onclick= closeSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li onclick= closeSidebar()><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></li>
+            <li><a href="#home" data-section="home" class="nav-link" >Home</a></li>
+            <li><a href="#projects" data-section="projects" class="nav-link">Projects</a></li>
+            <li><a href="#team" data-section="team" class="nav-link">Team</a></li>
+            <li><a href="#contact" data-section="contact" class="nav-link">Contact</a></li>
 
             <span>
                 <li><a href="https://www.facebook.com/?sk=welcome"><i class="fa-brands fa-facebook"></i></a></i></li>
@@ -58,7 +58,7 @@
 
 
 <!-- first section -->
-<div class="header-container" id="home">
+<div class="header-container" id="home" class="section">
     <div class="header-row ">
         <div class="header-max-width-md header-margin-auto header-margin-top">
             <div class="header-content header-margin-bottom-sm  header-margin-top">
@@ -87,37 +87,40 @@
 </div>
 
 <!-- video animation -->
-<!-- <div class="header-container">
+<div class="header-container header-animation">
     <video id="load-video-one" style="position: fixed;" src="https://tryolabs.com/pages/index/hero.mp4" style="width: 100%; mix-blend-mode: multiply;" autoplay="" loop=""></video>
-</div> -->
+</div>
 
 
 
 
 
-<div class="header-container header-margin-top-md header-bg-gradient-purple" id="projects">
+<div class="header-container header-margin-top-md header-bg-gradient-purple section" id="projects">
     <div class="header-row">
         <div class="header-content">
-            <h2 class="header-text-white header-font-sm header-font-weight-sm">Our Projects</h2>
+            <h2 class="header-text-white header-font-lg header-font-weight-md">Project 1</h2>
         </div>
-        <div class="header-content header-margin-bottom-md">
-            <h2 class="header-text-white header-font-lg header-font-weight-md"><span class="header-text-blue">AI</span> Empowerment</h2>
-        </div>
-        <div class="header-content header-flex-grid-2 header-flex-gap-md">
-            <div class="header-content image-container mySwiper" pagination="false" pagination-clickable="false" navigation="true" space-between="30"
-            centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
-                <img src="assets/images/mockrocket-capture (1).png" class="swiper-slide" style="width: 450px; height: 350px;">
-                <img src="assets/images/mockrocket-capture (2).png" class="swiper-slide" style="width: 350px; height: 350px;">
-                <img src="assets/images/mockrocket-capture (3).png" class="swiper-slide" style="width: 350px; height: 350px;">
-                <img src="assets/images/mockrocket-capture (4).png" class="swiper-slide" style="width: 350px; height: 350px;">
-                <img src="assets/images/mockrocket-capture (5).png" class="swiper-slide" style="width: 350px; height: 350px;">
-              </div>
+        
+        <div class="header-content header-flex-grid-2 header-flex-gap-md margin-top-pj">
+            <div class="project-img">
+                <div class="header-content image-container">
+                <img src="assets/images/mockrocket-capture (1).png" style="width:350px; height: 300px;">
+                </div>
+
+                <div class="header-content image-container">
+                <img src="assets/images/mockrocket-capture (2).png" class="swiper-slide" style="width: 350px; height: 300px;">
+                </div>
+
+                <div class="header-content image-container">
+                <img src="assets/images/mockrocket-capture (3).png" class="swiper-slide" style="width: 350px; height: 300px;">
+                </div>
+            </div>
 
             <div class="header-content">
                 <div class="header-margin-bottom-sm a-tag header-bg-transparent header-content header-padding-sm header-border-radius-sm">
-                    <h1 class="header-margin-bottom-sm header-font-md header-flex header-flex-start header-align-center header-font-weight-md header-text-white"><img src="https://tryolabs.imgix.net/icons/white/rocket.svg?auto=format&fit=max&w=32" alt=""> Ai Acceleration</h1>
-                    <h3 class="header-font-sm header-font-weight-sm header-text-white">Stay at the forefront of the ever-evolving digital landscape. We leverage the industry expertise of our clients combined with our technical background, providing a fast ramp-up.</h3>
-                    <a href="project1.html" class="button btn">Explore</a>
+                    <h1 class="header-margin-bottom-sm header-font-md header-flex header-flex-start header-align-center header-font-weight-md header-text-white"><img src="https://tryolabs.imgix.net/icons/white/rocket.svg?auto=format&fit=max&w=32" alt="">Our three focus areas</h1>
+                    <h3 class="header-font-sm header-font-weight-sm header-text-white">At circa, we are committed to employing advanced artificial intelligence to tackle critical challenges in three primary areas</h3>
+                    <!-- <a href="goal.html" class="button btn">Explore</a> -->
                 </div>
 
                 <div class="header-margin-bottom-sm a-tag header-bg-transparent header-content header-padding-sm header-border-radius-sm">
@@ -129,13 +132,13 @@
                 <div class="header-margin-bottom-sm a-tag header-bg-transparent header-content header-padding-sm header-border-radius-sm">
                     <h1 class="header-margin-bottom-sm header-font-md header-flex header-flex-start header-align-center header-font-weight-md header-text-white"><img src="https://tryolabs.imgix.net/icons/white/bar-chart-flag.svg?auto=format&fit=max&w=32" alt="">e-qual Genie App</h1>
                     <h3 class="header-font-sm header-font-weight-sm header-text-white">We are excited to announce the upcoming launch of our dedicated mobile app, which leverages the powerful capabilities of the Assistant Model. Currently in the prototype stage, this app is designed to bring advanced AI-driven time management and financial planning directly to your mobile device.</h3>
-                    <a href="project1.html" class="button btn">Explore</a>
+                    <a href="project2.html" class="button btn">Explore</a>
                 </div>
             </div>
         </div>
         
         
-        <div class="header-container header-row header-margin-top-md" id="team">
+        <div class="header-container header-row header-margin-top-md section" id="team">
             <h5 class="header-line-height-sm header-font-md header-font-weight-sm header-text-white">Our Team</h5>
             <h2 class="header-line-height-sm header-font-lg header-font-weight-md header-text-white">Meet the Team</h2>
             <div class="header-content header-margin-top-lg">
@@ -143,7 +146,7 @@
                     <div class="header-content header-cont header-bg-transparent header-padding-md header-border-radius-new">
                         <img src="assets/images/Amaniampong Amankwah Wisdom.png">
                         <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Amaniampong Amankwah <br> Wisdom</h3>
-                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active active">CHIEF EXECUTIVE OFFICE</h5>
+                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active active">CHIEF EXECUTIVE OFFICER</h5>
                     </div>
                     
 
@@ -163,26 +166,26 @@
                     <div class="header-content  header-cont header-bg-transparent header-padding-md header-border-radius-new">
                         <img src="assets/images/michael laryea tetteh.png">
                         <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Michael Laryea</h3>
-                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active">RESEARCH OFFICER</h5>
+                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active">SOFTWARE ENGINEER</h5>
                     </div>
 
                     <div class="header-content  header-cont header-bg-transparent header-padding-md header-border-radius-new">
                         <img src="assets/images/Richmond.jpg" width="270px" height="270px" style="border-radius: 50%;">
                         <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Richmond Manu Andoh</h3>
-                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white">Software Engineer</h5>
+                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white">SOFTWARE ENGINEER</h5>
                     </div>        
                                 
                     <div class="header-content  header-cont header-bg-transparent header-padding-md header-border-radius-new">
                         <img src="assets/images/Agyei Boakye Emmanuel.png" >
-                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Agyei Boakye</h3>
+                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Emmanuel Agyei Boakye</h3>
                         <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white">RESEARCH OFFICER</h5>
                     </div> 
                     
                     
                     <div class="header-content  header-cont header-bg-transparent header-padding-md header-border-radius-new">
                         <img src="assets/images/Osborn Ayeh.png">
-                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">OSBORN ANGMOR AYEH</h3>
-                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active">SOFTWARE ENGINEER</h5>
+                        <h3 class="header-line-height-sm header-font-weight-md header-font-md header-text-white">Osborn Angmor Ayeh</h3>
+                        <h5 class="header-line-height-sm header-font-weight-sm header-font-sm header-text-white active">GRAPHIC & UI DESIGNER</h5>
                     </div>
                 </div>
             </div>
@@ -192,7 +195,7 @@
 </div>
  
 <!-- CONTACT SECTION -->
-<div class="contact header-container" id="contact">
+<div class="contact header-container section" id="contact">
     <h2>Contact Us</h2>
     <div class="container">
         <div class="contact-wrapper">
